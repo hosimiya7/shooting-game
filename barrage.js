@@ -22,7 +22,7 @@ class Bullet extends SpriteActor {
         const hitArea = new Rectangle(4, 0, 8, 16);
         super(x, y, sprite, hitArea, ['playerBullet']);
 
-        this._speed = 6;
+        this._speed = 4;
 
         // 敵に当たったら消える
         this.addEventListener('hit', (e) => {
