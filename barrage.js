@@ -118,7 +118,7 @@ class Enemy extends SpriteActor {
         const hitArea = new Rectangle(0, 0, 16, 16);
         super(x, y, sprite, hitArea, ['enemy']);
 
-        this.maxHp = 50;
+        this.maxHp = 100;
         this.currentHp = this.maxHp;
 
         this._interval = 10;
@@ -157,7 +157,7 @@ class Enemy extends SpriteActor {
         this._timeCount++;
         if(this._timeCount > this._interval) {
             this._count += 10;
-            this.shootCircularBullets(10, 1, this._count);
+            this.shootCircularBullets(20, 2, this._count);
             this._timeCount = 0;
         }
 
